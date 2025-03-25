@@ -1,0 +1,120 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #188ab8, #fad0c4);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #ff4757;
+    transform: scale(1.1);
+}
+
+/* Input para el nombre */
+input {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Panel de puntaje */
+p {
+    font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Sección de puntuaciones */
+#puntuaciones {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#puntuaciones h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#puntuaciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+#puntuaciones li {
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Mensaje de finalización */
+#mensajeFinal {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, button, p, #puntuaciones, input, #mensajeFinal {
+    animation: fadeIn 0.8s ease-out;
+}

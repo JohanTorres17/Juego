@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Clicker Challenge</h1>
+    <p>Haz clic lo más rápido posible en 10 segundos</p>
+
+    <!-- Campo para el nombre -->
+    <input type="text" id="nombreJugador" placeholder="Tu nombre..." />
+
+    <button onclick="iniciarJuego()">Iniciar</button>
+    <button onclick="contarClick()">¡Click!</button>
+
+    <p>Puntuación: <span id="contador">0</span></p>
+    <p>Tiempo restante: <span id="tiempo">10</span> segundos</p>
+
+    <!-- Mensaje de finalización -->
+    <p id="mensajeFinal"></p>
+
+    <div id="puntuaciones"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
