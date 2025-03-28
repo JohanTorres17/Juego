@@ -1,9 +1,7 @@
-
-// 📌 Importar Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getFirestore, collection, addDoc, query, orderBy, limit, getDocs } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
-// 🔥 Configuración de Firebase
+// Configuración de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyAAK8N_zcj4N3iAIJ73NPurl_Mtet2dA8c",
     authDomain: "juego-torres-ceballos.firebaseapp.com",
@@ -13,11 +11,11 @@ const firebaseConfig = {
     appId: "1:388847156697:web:fabc1f98b9ea834113edc8"
 };
 
-// 🚀 Inicializar Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// 🎮 Variables del juego
+// Variables del juego
 let clicks = 0;
 let tiempoRestante = 10;
 let intervalo;
@@ -43,7 +41,7 @@ window.iniciarJuego = function () {
     document.querySelector("button[onclick='iniciarJuego()']").disabled = true;
     document.querySelector("button[onclick='contarClick()']").disabled = false;
 
-    // ⏳ Temporizador
+    // Temporizador
     intervalo = setInterval(() => {
         if (tiempoRestante > 0) {
             tiempoRestante--;
