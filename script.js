@@ -1,7 +1,15 @@
+// 📌 Cargar dinámicamente el CSS
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = "style.css"; 
+document.head.appendChild(link);
+
+// 📌 Importar Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getFirestore, collection, addDoc, query, orderBy, limit, getDocs } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
+// 🔥 Configuración de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyAAK8N_zcj4N3iAIJ73NPurl_Mtet2dA8c",
     authDomain: "juego-torres-ceballos.firebaseapp.com",
@@ -9,13 +17,13 @@ const firebaseConfig = {
     storageBucket: "juego-torres-ceballos.firebasestorage.app",
     messagingSenderId: "388847156697",
     appId: "1:388847156697:web:fabc1f98b9ea834113edc8"
-  };
+};
 
-// Inicializar Firebase
+// 🚀 Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Variables del juego
+// 🎮 Variables del juego
 let clicks = 0;
 let tiempoRestante = 10;
 let intervalo;
@@ -41,7 +49,7 @@ window.iniciarJuego = function () {
     document.querySelector("button[onclick='iniciarJuego()']").disabled = true;
     document.querySelector("button[onclick='contarClick()']").disabled = false;
 
-    // Temporizador
+    // ⏳ Temporizador
     intervalo = setInterval(() => {
         if (tiempoRestante > 0) {
             tiempoRestante--;
