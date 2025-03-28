@@ -1,9 +1,3 @@
-// 📌 Cargar dinámicamente el CSS
-const link = document.createElement("link");
-link.rel = "stylesheet";
-link.type = "text/css";
-link.href = "style.css"; 
-document.head.appendChild(link);
 
 // 📌 Importar Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
