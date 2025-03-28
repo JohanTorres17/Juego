@@ -1,22 +1,24 @@
 /* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
     background: linear-gradient(135deg, #188ab8, #fad0c4);
     color: #fff;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Agrega un padding para evitar cortes en WebView */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh; /* En lugar de height: 100vh */
+    height: auto;
+    width: 100%;
 }
 
 /* Título principal */
 h1 {
     font-size: 2.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Ajuste de sombra */
     margin-bottom: 10px;
 }
 
@@ -31,7 +33,7 @@ button {
     border: none;
     border-radius: 8px;
     transition: 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25); /* Ajuste de sombra */
 }
 
 button:hover {
@@ -105,16 +107,11 @@ p {
 
 /* Animación de fade-in */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 h1, button, p, #puntuaciones, input, #mensajeFinal {
     animation: fadeIn 0.8s ease-out;
+    -webkit-animation: fadeIn 0.8s ease-out; /* Compatibilidad con WebView */
 }
